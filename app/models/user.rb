@@ -3,4 +3,5 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable and :recoverable (removing for now)
   devise :database_authenticatable, :registerable,
          :rememberable, :validatable
+  has_many :tweets
 end
