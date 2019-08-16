@@ -1,0 +1,28 @@
+<div class="container">
+
+	<p>
+	  <strong>User:</strong>
+	  <%= @garment.user.email %>
+	</p>
+
+	<p>
+	  <strong>Name:</strong>
+	  <%= @garment.garment_name %>
+	</p>
+
+	<p>
+	  <strong>Type:</strong>
+	  <%= @garment.garment_type %>
+	</p>
+
+	<p>
+	  <strong>Desc:</strong>
+	  <%= @garment.desc %>
+	</p>
+
+
+	<% if @garment.user == current_user %>
+	<%= link_to 'Edit', edit_garment_path(@garment) %> |
+	<% end %>
+	<%= link_to 'Back', garments_path %>
+</div>

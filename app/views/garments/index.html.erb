@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<h1>Garments</h1>
+
+<table class = "table">
+  <thead class = "thead-dark">
+    <tr>
+      <th>User</th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @garments.each do |garment| %>
+      <tr>
+        <td><%= garment.user.email %></td>
+        <td><%= garment.garment_name %></td>
+        <td><%= garment.garment_type %></td>
+        <td><%= garment.desc %></td>
+        <td><%= link_to 'Show', garment %></td>
+        <% if garment.user == current_user %>
+          <td><%= link_to 'Edit', edit_garment_path(garment) %></td>
+          <td><%= link_to 'Destroy', garment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if user_signed_in? %>
+  <%= link_to 'New Garment', new_garment_path %>
+<%end %>
+</div>
