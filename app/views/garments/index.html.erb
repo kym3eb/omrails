@@ -4,7 +4,7 @@
     <div class="col-md-4">
       <div class="card card-block">
         <h4>Garments</h4>
-        <p class="card-text"> <%= current_user.email %> </p>
+        <p class="card-text"> <%= current_user.username %> </p>
        </div>
      </div>
       <div class="col-md-8">
@@ -17,7 +17,7 @@
               <h5 class="list-group-item-heading"><%= garment.garment_name %></h5>
               <p class="list-group-item-text">Type: <%= garment.garment_type %></p>
               <p class="list-group-item-text"><%= garment.desc %></p>
-              <p class="list-group-item-text"><%= garment.user.email %></p>
+              <p class="list-group-item-text"><%= garment.user.username %></p>
             <% end %>
           <% end %>
         </ul>
