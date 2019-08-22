@@ -38,6 +38,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'devise'
 gem 'activeadmin'
+gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 
 
 group :development, :test do
