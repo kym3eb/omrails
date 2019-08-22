@@ -11,19 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="field">
+  <div class="form-group">
     <%= form.label :garment_name %>
     <%= form.text_field :garment_name %>
   </div>
 
-  <div class="field">
-    <%= form.label :garment_type %>
-    <%= form.text_field :garment_type %>
+  <div class="form-group col-md-4">
+    <label for="garment_type">Type</label>
+    <%= form.select :garment_type, ['Top', 'Bottom', 'One-piece'], {prompt: "Choose..."}, {class: "form-control"} %>
   </div>
 
   <div class="form-group">
