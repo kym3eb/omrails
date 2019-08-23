@@ -41,6 +41,7 @@ gem 'activeadmin'
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'paperclip', '~> 5.0.0'
+gem 'aws-sdk', '~> 2.3'
 
 
 group :development, :test do
