@@ -68,6 +68,6 @@ before_action :authenticate_user!, except: [:index, :show]
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tweet_params
-      params.require(:tweet).permit(:user_id, :content)
+      params.require(:tweet).permit(:user_id, :content, :image)
     end
 end
