@@ -60,7 +60,7 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
-  # config.active_job.queue_adapter     = :resque
+  # config.active_job.queue_adapter     = :resquegit st
   # config.active_job.queue_name_prefix = "omruby_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
@@ -97,7 +97,7 @@ Rails.application.configure do
     s3_credentials: {
       bucket: ENV['S3_BUCKET_NAME'],
       access_key_id: ENV['AWS_ACCESS_KEY_ID'],
-      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
+      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
       s3_region: ENV['AWS_REGION']
     }
   }
