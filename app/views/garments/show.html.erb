@@ -1,28 +1,19 @@
 <div class="container">
-
-	<p>
-	  <strong>User:</strong>
-	  <%= @garment.user.username %>
-	</p>
-
-	<p>
-	  <strong>Name:</strong>
-	  <%= @garment.garment_name %>
-	</p>
-
-	<p>
-	  <strong>Type:</strong>
-	  <%= @garment.garment_type %>
-	</p>
-
-	<p>
-	  <strong>Desc:</strong>
-	  <%= @garment.desc %>
-	</p>
-
-
-	<% if @garment.user == current_user %>
-	<%= link_to 'Edit', edit_garment_path(@garment) %> |
-	<% end %>
-	<%= link_to 'Back', garments_path %>
+	<div class="row">
+		<div class="offset-md-2 col-md-8">
+			<div class="card card-block">
+				<h4 class="card-title"><%= link_to @garment.user.username, user_path(@garment.user.username) %></h4>
+				<center><%= image_tag @garment.image.url, class: "img-fluid"%></center>
+				<p class="card-text"><%= @garment.garment_type %> </p>
+				<p class="card-text"><%= @garment.desc %> </p>
+				<p class="card-text">
+				<% if @garment.user == current_user %>
+					<%= link_to 'Edit', edit_garment_path(@garment), class: "card-link" %>
+					<%= link_to 'Delete', @garment, method: :delete, class: "card-link" %> 
+				<% end %>
+				<%= link_to 'Back', garments_path, class: "card-link" %>
+			</p>
+			</div>
+		</div>
+	</div>
 </div>

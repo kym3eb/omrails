@@ -20,7 +20,10 @@
     <label for="garment_type">Type</label>
     <%= form.select :garment_type, ['Top', 'Bottom', 'One-piece'], {prompt: "Choose..."}, {class: "form-control"} %>
   </div>
-
+  <div class="form-group">
+    <%= form.label :image %>
+    <%= form.file_field :image, class: "form-control" %>
+  </div>
   <div class="form-group">
     <%= form.label :desc %>
     <%= form.text_area :desc, class: "form-control" %>
